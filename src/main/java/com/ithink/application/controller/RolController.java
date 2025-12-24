@@ -1,4 +1,4 @@
-package com.ithink.application;
+package com.ithink.application.controller;
 
 import com.ithink.application.dto.CreateRolDto;
 import com.ithink.application.dto.ResponseApp;
