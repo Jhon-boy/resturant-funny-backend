@@ -23,4 +23,7 @@ public class AppConstants {
 
     //Id de la Transaccion para Biometria
     public static  final Integer ID_TRANSACCION_BIOMETRIA = 1;
+    
+    public static final String SUPABASE_API_KEY = "apikey";
+    public static final String SUPABASE_AUTHORIZATION = "Authorization";
 }

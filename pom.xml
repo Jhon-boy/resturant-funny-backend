@@ -54,19 +54,10 @@
 			<artifactId>spring-boot-starter-validation</artifactId>
 		</dependency>
 
-	<!-- H2 Database para desarrollo/pruebas -->
-	<dependency>
-		<groupId>com.h2database</groupId>
-		<artifactId>h2</artifactId>
-		<scope>runtime</scope>
-	</dependency>
-	
-	<!-- PostgreSQL Driver (opcional, comentado para usar H2) -->
-	<dependency>
-		<groupId>org.postgresql</groupId>
-		<artifactId>postgresql</artifactId>
-		<scope>runtime</scope>
-		<optional>true</optional>
+	 <dependency>
+	    <groupId>com.google.code.gson</groupId>
+	    <artifactId>gson</artifactId>
+    <version>2.13.2</version>
 	</dependency>
 	
 	<dependency>
