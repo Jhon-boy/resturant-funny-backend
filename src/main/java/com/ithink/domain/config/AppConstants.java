@@ -6,8 +6,10 @@ package com.ithink.domain.config;
 public class AppConstants {
     public static final String CANAL = "CRD";
     public static final String M_INI = "INICIA -->";
+    public static final String M_INI_CRON = "****** CRON JOB ********";
     public static final String HANDLER_INI = "\n PETICION INICIA -->";
     public static final String M_FIN = "FIN -->";
+    public static final String M_FIN_CRON = "******* CRON JOB ******* -";
     public static final String HANDLER_FIN = "\n PETICION FIN -->";
     public static final String KEY_TOKEN_ZIMA = "";
 

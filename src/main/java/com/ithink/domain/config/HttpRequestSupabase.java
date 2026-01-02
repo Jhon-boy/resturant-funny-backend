@@ -35,7 +35,7 @@ public class HttpRequestSupabase {
 		HttpEntity<String> entity = new HttpEntity<>(body, headers);
         ResponseEntity<String> response = restTemplate.exchange(SUPABASE_URL_EXTERNAL + path, HttpMethod.POST, entity,
         		String.class);
-        loggerService.info(AppConstants.M_FIN + response.toString());
+        loggerService.info(AppConstants.M_FIN + Utils.toJson(response.getBody()));
         
         return response.toString();
 
@@ -53,7 +53,7 @@ public class HttpRequestSupabase {
 		HttpEntity<String> entity = new HttpEntity<>( headers);
         ResponseEntity<String> response = restTemplate.exchange(SUPABASE_URL_EXTERNAL + path, HttpMethod.GET, entity,
         		String.class);
-        loggerService.info(AppConstants.M_FIN + response.toString());
+        loggerService.info(AppConstants.M_FIN + Utils.toJson(response.getBody()));
         
         return response.getBody();
 

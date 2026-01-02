@@ -22,6 +22,7 @@ public class RolPorImpl implements TrolPort {
 		logger.setLogger(RolPorImpl.class);
 		this.httpRequestSupabase.SUPABASE_API_KEY = this.config.getSupabase().getApikey();
 		this.httpRequestSupabase.SUPABASE_AUTHORIZATION = this.config.getSupabase().getAuthorization();
+		this.httpRequestSupabase.SUPABASE_URL_EXTERNAL= this.config.getSupabase().getUrl();
 		
 	}
 
@@ -31,8 +32,8 @@ public class RolPorImpl implements TrolPort {
 		ResponseGraphQl response = new ResponseGraphQl();
 		StringBuilder pathBuilder = new StringBuilder(RequestSupabase.SELECT_ROLES.getPath());
 		Object request = httpRequestSupabase.ejecutarGet(pathBuilder.append(idRol).toString());
-		response = ResponseGraphQl.OkResponse(request);
-		logger.info(AppConstants.M_INI, Utils.toJson(response));
+		response = ResponseGraphQl.deserializar(request);
+		logger.info(AppConstants.M_FIN, Utils.toJson(response));
 		return response;
 	}
 
@@ -42,8 +43,8 @@ public class RolPorImpl implements TrolPort {
 		ResponseGraphQl response = new ResponseGraphQl();
 		StringBuilder pathBuilder = new StringBuilder(RequestSupabase.SELECT_ROLES.getPath());
 		Object request = httpRequestSupabase.ejecutarGet(pathBuilder.append("*").toString());
-		response = ResponseGraphQl.OkResponse(request);
-		logger.info(AppConstants.M_INI, Utils.toJson(response));
+		response = ResponseGraphQl.deserializar(request);
+		logger.info(AppConstants.M_FIN, Utils.toJson(response));
 		return response;
 	}
 	

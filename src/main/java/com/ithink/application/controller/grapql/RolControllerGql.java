@@ -35,7 +35,7 @@ public class RolControllerGql {
     public ResponseGraphQl getAllRoles(){
         loggerService.info(AppConstants.M_INI  + " OBTENIENDO ROLES" );
         ResponseGraphQl response = trolPort.obtenerTodosLosRoles();
-        loggerService.info(AppConstants.M_FIN + " OBTENIENDO ROLES" + response);
+        loggerService.info(AppConstants.M_FIN + " OBTENIENDO ROLES" + Utils.toJson(response));
         return response;
     }
 }
