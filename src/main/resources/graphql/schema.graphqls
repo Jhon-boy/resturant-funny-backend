@@ -1,0 +1,13 @@
+# Query - Me sirve solo para realizar consultas
+scalar JSON
+
+type Query{
+    findyRoleById(rolId: ID!) : ResponseGraphQl
+    roles: ResponseGraphQl
+}
+
+type ResponseGraphQl{
+    code: String,
+    message: String
+    data: JSON
+}
