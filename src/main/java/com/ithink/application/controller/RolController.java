@@ -23,6 +23,7 @@ public class RolController {
 
     @GetMapping("/isalive")
     public ResponseApp isALive() {
+        loggerService.info(AppConstants.M_INI + " ISALIVE ROL");
         return ResponseApp.okResponse();
     }
 
