@@ -34,7 +34,7 @@ steps:
       - '--min-instances=0'
       - '--max-instances=10'
       - '--set-secrets=SUPABASE_URL=SUPABASE_URL:latest,SUPABASE_API_KEY=SUPABASE_API_KEY:latest,SUPABASE_AUTHORIZATION=SUPABASE_AUTHORIZATION:latest'
-      - '--set-env-vars=CRON_EXPRESSION=0 0 2 * * *,PORT=8080'
+      - '--set-env-vars=CRON_EXPRESSION=0 0 2 * * *'
     id: 'deploy-cloud-run'
 
 # Guardar las imágenes construidas
